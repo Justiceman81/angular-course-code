@@ -12,7 +12,7 @@ import {
   providedIn: 'root',
 })
 export class PreparationService {
-  public baseUrl = 'http://localhost:3000';
+  public baseUrl = 'http://localhost:4200';
 
   constructor(private http: HttpClient) {}
 
@@ -25,7 +25,7 @@ export class PreparationService {
       )
       .pipe(
         map((response: any) => {
-          return { data: response[0]?.questions || []};
+          return { data: response[0]?.questions || [] };
         }),
         delay(500)
       );
